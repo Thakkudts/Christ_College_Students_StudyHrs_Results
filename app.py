@@ -1,7 +1,7 @@
 import streamlit as st
 import joblib
 
-model = joblib.load("Logistic_regression_Student_StudyHrs_model.pkl")
+model = joblib.load("Logistic_regression_Student_StudyHrs_model(1).pkl")
 
 st.title("Student Pass/Fail Prediction")
 
