@@ -1,3 +1,12 @@
+import gradio as gr
+import joblib
+import pandas as pd
+import os
+
+# Load model
+model = joblib.load("Student_Std_Hrs.pkl")
+
+
 def predict_result(study_hours):
 
     input_data = pd.DataFrame({
