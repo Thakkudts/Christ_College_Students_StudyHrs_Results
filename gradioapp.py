@@ -1,17 +1,17 @@
+```python
 import gradio as gr
 import joblib
 import pandas as pd
 import os
 
-# Load model
 model = joblib.load("Logistic_regression_Student_StudyHrs_model (1).pkl")
 
 
-def predict_result(study_hours, attendence):
+def predict_result(study_hours, attendance):
 
     input_data = pd.DataFrame({
         "Study_Hours": [study_hours],
-        "Attendance": [attendence]
+        "Attendence": [attendance]
     })
 
     prediction = model.predict(input_data)[0]
@@ -59,3 +59,4 @@ if __name__ == "__main__":
         server_name="0.0.0.0",
         server_port=int(os.environ.get("PORT", 7860))
     )
+```
